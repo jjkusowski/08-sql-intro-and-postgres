@@ -23,7 +23,7 @@ Article.prototype.toHtml = function() {
 };
 
 // REVIEW: The parameter was refactored to expect the data from the database, rather than a local file.
-Article.loadAll = rows => {
+Article.loadAll = rawData => {
   rawData.sort((a,b) => (new Date(b.publishedOn)) - (new Date(a.publishedOn)))
 
   rawData.forEach(articleObject => Article.all.push(new Article(articleObject)))
