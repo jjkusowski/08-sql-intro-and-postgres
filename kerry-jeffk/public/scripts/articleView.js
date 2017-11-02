@@ -75,8 +75,6 @@ articleView.setTeasers = () => {
 
 articleView.initNewArticlePage = () => {
   $('.tab-content').show();
-  });
-
   $('#new-form').on('change', 'input, textarea', articleView.create);
   $('#new-form').on('submit', articleView.submit);
 };
